@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>حساب مساحة الأشكال الهندسية</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>حساب مساحة الأشكال الهندسية</h1>
+    
+    <h2>المربع</h2>
+    <label for="square-side">أدخل طول ضلع المربع:</label>
+    <input type="number" id="square-side" />
+    <button onclick="calculateSquareArea()">حساب المساحة</button>
+    <p id="square-area"></p>
+
+    <h2>المثلث</h2>
+    <label for="triangle-base">أدخل طول قاعدة المثلث:</label>
+    <input type="number" id="triangle-base" />
+    <br />
+    <label for="triangle-height">أدخل ارتفاع المثلث:</label>
+    <input type="number" id="triangle-height" />
+    <button onclick="calculateTriangleArea()">حساب المساحة</button>
+    <p id="triangle-area"></p>
+
+    <h2>المستطيل</h2>
+    <label for="rectangle-length">أدخل طول المستطيل:</label>
+    <input type="number" id="rectangle-length" />
+    <br />
+    <label for="rectangle-width">أدخل عرض المستطيل:</label>
+    <input type="number" id="rectangle-width" />
+    <button onclick="calculateRectangleArea()">حساب المساحة</button>
+    <p id="rectangle-area"></p>
+
+    <h2>الدائرة</h2>
+    <label for="circle-radius">أدخل نصف قطر الدائرة:</label>
+    <input type="number" id="circle-radius" />
+    <button onclick="calculateCircleArea()">حساب المساحة</button>
+    <p id="circle-area"></p>
+
+    <script>
+      function calculateSquareArea() {
+        var side = document.getElementById("square-side").value;
+        var area = side * side;
+        document.getElementById("square-area").innerHTML =
+          "مساحة المربع = " + area;
+      }
+
+      function calculateTriangleArea() {
+        var base = document.getElementById("triangle-base").value;
+        var height = document.getElementById("triangle-height").value;
+        var area = (base * height) / 2;
+        document.getElementById("triangle-area").innerHTML =
+          "مساحة المثلث = " + area;
+      }
+
+      function calculateRectangleArea() {
+        var length = document.getElementById("rectangle-length").value;
+        var width = document.getElementById("rectangle-width").value;
+        var area = length * width;
+        document.getElementById("rectangle-area").innerHTML =
+          "مساحة المستطيل = " + area;
+      }
+
+      function calculateCircleArea() {
+        var radius = document.getElementById("circle-radius").value;
+    var area = Math.PI * radius * radius;
+    document.getElementById("circle-area").innerHTML =
+      "مساحة الدائرة = " + area;
+  }
+</script>
+  </body>
+</html>
